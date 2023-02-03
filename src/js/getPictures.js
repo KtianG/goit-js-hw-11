@@ -2,16 +2,18 @@ import 'regenerator-runtime/runtime';
 import axios from 'axios';
 
 export { getPictures };
+export { PER_PAGE };
 
 const API_KEY = '33326758-3f776db476411dd79607b9f62';
 const BASE_URL = 'https://pixabay.com/api/';
+const PER_PAGE = 40;
 const parameters = {
   key: API_KEY,
   q: '',
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: 'true',
-  per_page: 40,
+  per_page: PER_PAGE,
   page: 1,
 };
 

@@ -16,7 +16,7 @@ function makePCMarkup(hit) {
   markup = `
   <div class="photo-card">
   <a class="gallery-link" href="${largeImageURL}">
-      <img
+      <img class="thumb"
         src="${webformatURL}"
         alt="${tags}"
         loading="lazy"
@@ -24,10 +24,10 @@ function makePCMarkup(hit) {
     </a>
     <div class="info">
       <p class="info-item">
-        <b>Likes</b> <span class="info-item__value">${likes}</span>
+        <b>&nbsp&nbspLikes&nbsp</b> <span class="info-item__value">${likes}</span>
       </p>
       <p class="info-item">
-        <b>Views</b> <span class="info-item__value">${views}</span>
+        <b>&nbsp&nbspViews&nbsp&nbsp</b> <span class="info-item__value">${views}</span>
       </p>
 
       <p class="info-item">
