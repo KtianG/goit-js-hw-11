@@ -10,7 +10,13 @@ const search_form = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
 const load_button = document.querySelector('.load-more');
 
+let lightbox = new SimpleLightbox('.gallery-link', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+
 let page = 1;
+let search_query = '';
 
 const searchHandler = event => {
   page = 1;
@@ -19,14 +25,24 @@ const searchHandler = event => {
     elements: { searchQuery },
   } = event.currentTarget;
 
-  if (searchQuery.value.length !== 0) {
-    getPictures(searchQuery.value, page).then(data => {
+  search_query = searchQuery.value;
+
+  if (search_query.length !== 0) {
+    getPictures(search_query, page).then(data => {
       renderGallery(gallery, data, true);
+      lightbox.refresh();
     });
   }
 };
 const loadHandler = () => {
   page += 1;
+
+  if (search_query.length !== 0) {
+    getPictures(search_query, page).then(data => {
+      renderGallery(gallery, data, false);
+      lightbox.refresh();
+    });
+  }
 };
 
 search_form.addEventListener('submit', searchHandler);

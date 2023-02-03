@@ -89,10 +89,16 @@ button:hover {
   width: 100%;
   justify-content: space-between;
   padding: 0 5px;
+
+  font-size: small;
 }
 .info-item {
   display: block;
   text-align: center;
+}
+
+.info-item:not(:last-child) {
+  border-right: 1px solid #212121;
 }
 
 .load-more {
@@ -102,4 +108,9 @@ button:hover {
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.wrapper-end {
+  margin-top: 50px;
+  margin-bottom: 100px;
 }

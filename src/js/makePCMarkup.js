@@ -15,11 +15,13 @@ function makePCMarkup(hit) {
 
   markup = `
   <div class="photo-card">
-    <img
-      src="${webformatURL}"
-      alt="${tags}"
-      loading="lazy"
-    />
+  <a class="gallery-link" href="${largeImageURL}">
+      <img
+        src="${webformatURL}"
+        alt="${tags}"
+        loading="lazy"
+      />
+    </a>
     <div class="info">
       <p class="info-item">
         <b>Likes</b> <span class="info-item__value">${likes}</span>
@@ -37,8 +39,6 @@ function makePCMarkup(hit) {
       </p>
     </div>
   </div>`;
-
-  console.log(views);
 
   return markup;
 }
