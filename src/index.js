@@ -19,7 +19,11 @@ const searchHandler = event => {
     elements: { searchQuery },
   } = event.currentTarget;
 
-  console.log(searchQuery.value);
+  if (searchQuery.value.length !== 0) {
+    getPictures(searchQuery.value, page).then(data => {
+      renderGallery(gallery, data, true);
+    });
+  }
 };
 const loadHandler = () => {
   page += 1;
