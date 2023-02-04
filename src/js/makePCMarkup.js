@@ -24,14 +24,14 @@ function makePCMarkup(hit) {
     </a>
     <div class="info">
       <p class="info-item">
-        <b>&nbsp&nbspLikes&nbsp</b> <span class="info-item__value">${likes}</span>
+        <b>&nbspLikes&nbsp</b> <span class="info-item__value">${likes}</span>
       </p>
       <p class="info-item">
-        <b>&nbsp&nbspViews&nbsp&nbsp</b> <span class="info-item__value">${views}</span>
+        <b>&nbspViews&nbsp</b> <span class="info-item__value">${views}</span>
       </p>
 
       <p class="info-item">
-        <b>Comments</b> <span class="info-item__value">${comments}</span>
+        <b>&nbspComments&nbsp</b> <span class="info-item__value">${comments}</span>
       </p>
 
       <p class="info-item">
