@@ -32,7 +32,7 @@ body {
   border-radius: 3px;
 }
 
-button {
+.button-page {
   display: inline-block;
   outline: 0;
   border: none;
@@ -48,7 +48,7 @@ button {
   box-shadow: 2px 1px 2px 0px rgba(0, 0, 0, 0.6);
 }
 
-button:hover {
+.button-page:hover {
   background-color: #772ce8;
   box-shadow: none;
 }
