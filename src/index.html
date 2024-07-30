@@ -2,28 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Compatibility with older versions of Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simple Picture Gallery</title>
   </head>
   <body>
+    <!-- Container for the search form -->
     <div class="wrapper">
       <form class="search-form" id="search-form">
+        <!-- Input field for the search query -->
         <input
           type="text"
           name="searchQuery"
           autocomplete="off"
           placeholder="Search images..."
         />
+        <!-- Button to submit the search form -->
         <button class="button-page" type="submit">Search</button>
       </form>
     </div>
+    <!-- Container for the image gallery -->
     <div class="wrapper">
       <div class="gallery"></div>
     </div>
+    <!-- Container for the "Load more" button -->
     <div class="wrapper wrapper-end">
+      <!-- Button to load more images -->
       <button type="button" class="button-page load-more">Load more</button>
     </div>
+    <!-- Link to the external JavaScript file responsible for functionality -->
     <script src="index.js" type="module"></script>
   </body>
 </html>

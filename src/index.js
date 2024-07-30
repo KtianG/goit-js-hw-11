@@ -1,3 +1,4 @@
+// Importing necessary styles and modules
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import './css/styles.css';
 import { getPictures } from './js/getPictures';
@@ -6,19 +7,23 @@ import { renderGallery } from './js/renderGallery';
 import SimpleLightbox from 'simplelightbox';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
+// Selecting DOM elements
 const search_form = document.querySelector('.search-form');
 const gallery = document.querySelector('.gallery');
 const load_button = document.querySelector('.load-more');
 load_button.style.display = 'none';
 
+// Initialize SimpleLightbox for image lightbox functionality
 let lightbox = new SimpleLightbox('.gallery-link', {
   captionsData: 'alt',
   captionDelay: 250,
 });
 
+// Variables to keep track of the current page and search query
 let page = 1;
 let search_query = '';
 
+// Handler function for the search form submission
 const searchHandler = event => {
   page = 1;
   event.preventDefault();
@@ -42,6 +47,8 @@ const searchHandler = event => {
     });
   }
 };
+
+// Handler function for the "Load more" button click
 const loadHandler = () => {
   page += 1;
 
@@ -59,5 +66,6 @@ const loadHandler = () => {
   }
 };
 
+// Adding event listeners to handle user interactions
 search_form.addEventListener('submit', searchHandler);
 load_button.addEventListener('click', loadHandler);

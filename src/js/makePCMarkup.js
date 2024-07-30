@@ -1,8 +1,11 @@
+// Exporting the makePCMarkup function for use in other modules
 export { makePCMarkup };
 
+// Function to create HTML markup for a photo card
 function makePCMarkup(hit) {
   let markup = '';
 
+  // Destructuring hit object to extract image details
   const {
     webformatURL,
     largeImageURL,
@@ -13,6 +16,7 @@ function makePCMarkup(hit) {
     downloads,
   } = hit;
 
+  // Creating the HTML markup for the photo card
   markup = `
   <div class="photo-card">
   <a class="gallery-link" href="${largeImageURL}">
